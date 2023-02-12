@@ -1,0 +1,190 @@
+*, *::after, *::before {
+	box-sizing: inherit;
+}
+
+body {
+	box-sizing: border-box;
+	font-family: 'Roboto', sans-serif;
+	color: #34495E;
+	font-size: 1.2rem;
+}
+
+.header, .main {
+	min-width: 40rem;
+	max-width: 60rem;
+	margin: 0 auto;
+}
+
+.header {
+	display: flex;
+	flex-direction: column;
+	color: inherit;
+}
+
+.header__brand {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	border-bottom: 2px solid black;
+	padding: 0.1rem 0.25rem;
+}
+
+.header__brand-logo {
+	max-width: 20%;
+}
+
+.header__brand-name {
+	font-size: 2rem;
+}
+
+.header__navigation {
+	border-bottom: 2px solid black;
+}
+
+.header__navigation-list {
+	list-style: none;
+	padding: 0;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.header__navigation-listitem {
+
+}
+
+.header__navigation-link {
+	text-decoration: none;
+	color: inherit;
+	padding: 5px 10px;
+}
+
+.header__navigation-link:hover {
+	background: #85929E;
+	border-radius: 5px;
+	transition: color 0.3s ease-in-out;
+}
+
+.main {
+	display: flex;
+	flex-direction: column;
+	color: inherit;
+	align-items: center;
+}
+
+.form {
+	display: flex;
+	flex-direction: row;
+	padding: 10px;
+	align-items: center;
+	margin-bottom: 20px;
+}
+
+.form__input {
+	margin: 0;
+}
+.form__label {
+	padding: 0.3rem 0.2rem;	
+}
+
+.form__select {
+	color: inherit;
+	font-size: inherit;
+	border: 1px solid #85929E;
+	padding: 0.3rem 0.2rem;
+	border-radius: 6px;
+}
+
+.form__button {
+	display: inline-block;
+	font-size: inherit;
+	color: inherit;
+	background: #85929E;
+	border-radius: 6px;
+	border: none;
+	padding: 0.3rem 1.5rem;
+	cursor: pointer;
+	margin-left: 5px;
+}
+
+.form__button:hover {
+	background: #AEB6BF;
+	transition: color 0.3s ease-in-out;
+}
+
+.cars {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.car {
+	width: 15rem;
+	display: flex;
+	flex-direction: column;
+	border: 1px solid #85929E;
+	border-radius: 6px;
+	margin: 10px;
+}
+
+.car__header {
+	color: white;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 5px;
+}
+
+.color_road {
+	background-color: #5DADE2;
+}
+
+.color_dirt {
+	background-color: #F8C471;
+}
+
+.color_offroad {
+	background-color: #7DCEA0;
+}
+
+.car__header-model {
+	margin: 0;
+}
+
+.car__header-vendor {
+	margin: 0;
+}
+
+.car__header-link {
+	text-decoration: none;
+	color: inherit;
+}
+
+.car__header-link:hover {
+	text-decoration: underline;
+}
+
+.car__header-information {
+	margin: 0;
+	list-style: none;
+	padding: 0;
+	display: flex;
+	flex-direction: column;
+}
+
+.car__image {
+	padding: 5px;
+}
+
+.car__footer {
+	padding: 5px;
+}
+
+.car__footer-information {
+	margin: 0;
+	list-style: none;
+	padding: 0;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}

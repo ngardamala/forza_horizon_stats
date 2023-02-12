@@ -1,0 +1,43 @@
+{% extends "layout.html" %}
+
+{% block main_content %}
+	<section class="sort">
+		<form class='form' method="POST">
+			<p class="form__input">
+				<label class="form__label" for="sort_by">Sort by</label>
+				<select class="form__select" name="sort_by" id="sort_by">
+					<option class="form__select-option" value="vendor">Vendor</option>
+  					<option class="form__select-option" value="car_class">Car class</option>
+  					<option class="form__select-option" value="car_type">Car type</option>
+  					<option class="form__select-option" value="year">Year</option>
+				</select>
+			</p>
+			<button class="form__button" type="submit">Apply</button>
+		</form>
+	</section>
+
+	<section class="cars">
+		<article class="car">
+			<div class="car__header color_road">
+				<a class="car__header-link" href="#"><h2 class="car__header-model">MODEL T</h2></a>
+				<p class="car__header-vendor">FORD</p>
+			</div>
+			<div class="car__image">
+			</div>
+			<div class="car__footer">
+				<ul class="car__footer-information">
+					<li class="car__footer-information-item">
+						A800
+					</li>
+					<li class="car__footer-information-item">
+						1910
+					</li>
+					<li class="car__footer-information-item">
+						AWD
+					</li>
+				</ul>
+			</div>
+		</article>
+	</section>
+	
+{% endblock%}

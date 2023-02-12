@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css')}}">
+	<title> {{ title }} </title>
+</head>
+<body>
+	<header class="header">
+		<section class=header__brand>
+			<img class="header__brand-logo" src="https://i.ibb.co/Jxyz6f3/forza-horizon-5-logo.png">
+			<h1 class="header__brand-name">Forza Horizon 5 stats</h1>
+		</section>
+		<section class="header__navigation">
+			<ul class="header__navigation-list">
+				<li class="header__navigation-listitem">
+					<a class="header__navigation-link" href="{{ url_for('cars') }}">Cars</a>
+				</li>
+				<li class="header__navigation-listitem">
+					<a class="header__navigation-link" href="{{ url_for('road') }}">Road</a>
+				</li>
+				<li class="header__navigation-listitem">
+					<a class="header__navigation-link" href="{{ url_for('dirt') }}">Dirt</a>
+				</li>
+				<li class="header__navigation-listitem">
+					<a class="header__navigation-link" href="{{ url_for('offroad') }}">Offroad</a>
+				</li>
+				<li class="header__navigation-listitem">
+					<a class="header__navigation-link" href="{{ url_for('tracks') }}">Tracks</a>
+				</li>
+				<li class="header__navigation-listitem">
+					<a class="header__navigation-link" href="{{ url_for('championships') }}">Championships</a>
+				</li>
+				<li class="header__navigation-listitem">
+					<a class="header__navigation-link" href="{{ url_for('generate') }}">Generate</a>
+				</li>
+			</ul>
+		</section>
+	</header>
+	<main class="main">
+		{% block main_content %}
+		{% endblock %}
+	</main>
+	<footer class="footer">
+	</footer>
+</body>
+</html>
