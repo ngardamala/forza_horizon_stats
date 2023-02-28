@@ -1,0 +1,73 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <form class="p-2 border border-light rounded-3" action="#" method="POST">
+                    <div class="mb-1">
+                        <label class="form-label" for="vendor_id">Vendor</label>
+                        <input class="form-control" id="vendor_id" type="text" name="vendor" placeholder="Enter car vendor" value="{{ car['vendor'] }}">
+                    </div>
+                    <div class="mb-1">
+                        <label class="form-label" for="model_id">Model</label>
+                        <input class="form-control" id="model_id" type="text" name="model" placeholder="Enter car model" value="{{ car['model'] }}">
+                    </div>
+                    <div class="mb-1">
+                        <label class="form-label" for="year_id">Year</label>
+                        <input class="form-control" id="year_id" type="text" name="year" placeholder="Enter car manufactured year" value="{{ car['year'] }}">
+                    </div>
+                    <div class="mb-1">
+                        <label class="form-label" for="class_id">Class</label>
+                        <select class="form-control" id="class_id" name="class">
+                            <option value="B700" {{ 'selected' if car['class'] == 'B700' else '' }}>B700</option>
+                            <option value="A800" {{ 'selected' if car['class'] == 'A800' else '' }}>A800</option>
+                            <option value="S1900" {{ 'selected' if car['class'] == 'S1900' else '' }}>S1900</option>
+                            <option value="S2998" {{ 'selected' if car['class'] == 'S2998' else '' }}>S2998</option>
+                        </select>
+                    </div>
+                    <div class="mb-1">
+                        <label class="form-label" for="type_id">Type</label>
+                        <select class="form-control" id="type_id" name="type">
+                            <option value="ROAD" {{ 'selected' if car['type'] == 'ROAD' else '' }}>ROAD</option>
+                            <option value="DIRT" {{ 'selected' if car['type'] == 'DIRT' else '' }}>DIRT</option>
+                            <option value="OFFROAD" {{ 'selected' if car['type'] == 'OFFROAD' else '' }}>OFFROAD</option>
+                        </select>
+                    </div>
+                    <div class="mb-1">
+                        <label class="form-label" for="power_id">Power</label>
+                        <input class="form-control" id="power_id" type="text" name="power" placeholder="Enter car power in hp" value="{{ car['power'] }}">
+                    </div>
+                    <div class="mb-1">
+                        <label class="form-label" for="mass_id">Mass</label>
+                        <input class="form-control" id="mass_id" type="text" name="mass" placeholder="Enter car mass in kg" value="{{ car['mass'] }}">
+                    </div>
+                    <div class="mb-1">
+                        <label class="form-label" for="max_speed_id">Max Speed</label>
+                        <input class="form-control" id="max_speed_id" type="text" name="max_speed" placeholder="Enter car max speed in km/h" value="{{ car['max_speed'] }}">
+                    </div>
+                    <div class="mb-1">
+                        <label class="form-label" for="drivetrain_id">Class</label>
+                        <select class="form-control" id="drivetrain_id" name="drivetrain">
+                            <option value="AWD" {{ 'selected' if car['drivetrain'] == 'AWD' else '' }}>AWD</option>
+                            <option value="FWD" {{ 'selected' if car['drivetrain'] == 'FWD' else '' }}>FWD</option>
+                            <option value="RWD" {{ 'selected' if car['drivetrain'] == 'RWD' else '' }}>RWD</option>
+                        </select>
+                    </div>
+                    <div class="mb-1">
+                        <label class="form-label" for="test_track_id">Test Track</label>
+                        <input class="form-control" id="test_track_id" type="text" name="test_track" placeholder="Enter test track time (mm:ss.ms)" value="{{ car['test_track_str'] }}">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label" for="image_id">Car Image</label>
+                        <input class="form-control" id="image_id" type="text" name="image" placeholder="Enter link to car image" value="{{ car['image'] }}">
+                    </div>
+                    <div>
+                        <button class="btn btn-secondary" type="submit">Save changes</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+	
+{% endblock%}

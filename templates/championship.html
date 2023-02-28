@@ -1,0 +1,113 @@
+{% extends "base.html" %}
+
+{% block content %}
+	<div class="container">
+        <div class="row mb-1">
+            <div class="col-md-12 p-2 border border-light rounded-3 text-center
+            {% if championship['completed'] %}
+                bg-success
+            {% else %}
+                bg-primary
+            {% endif %}
+            ">
+                <h4><a href="{{ url_for('championship', championship_id=championship['id']) }}" class="card-car-link">{{ championship['name'] }}</a></h4>
+                <p>{{ championship['conditions'] }}</p>
+            </div>
+        </div>
+        <div class="row mb-3 justify-content-center">
+            <div class="col-md-5 mx-2 p-2 border border-light rounded-3">
+                <h5>Points championship</h5>
+                <table class="table table-striped table-bordered table-hover">
+                    <thead class="table-dark">
+                        <tr>
+                            <th>#</th>
+                            <th>Car</th>
+                            <th>Points</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for car in championship['points_championship'] %}
+                            <tr>
+                                <td class="align-middle">{{ loop.index }}</td>
+                                <td class="align-middle"><a href="{{ url_for('car', car_id=car['car_id']) }}" class="card-car-link">{{ car['name'] }}</a></td>
+                                <td class="align-middle">{{ car['points'] }}</td>
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+                <div class="col-md-5 mx-2 p-2 border border-light rounded-3">
+                <h5>Time championship</h5>
+                <table class="table table-striped table-bordered table-hover">
+                    <thead class="table-dark">
+                        <tr>
+                            <th>#</th>
+                            <th>Car</th>
+                            <th>Time</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for car in championship['time_championship'] %}
+                            <tr>
+                                <td class="align-middle">{{ loop.index }}</td>
+                                <td class="align-middle"><a href="{{ url_for('car', car_id=car['car_id']) }}" class="card-car-link">{{ car['name'] }}</a></td>
+                                <td class="align-middle">{{ car['time_str'] }}</td>
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        {% for track in championship['tracks'] %}
+            <div class="row mb-0">
+                <div class="col-md-12 bg-secondary p-2 border-light rounded-3">
+                    <h5><a href="{{ url_for('track', track_id=track['id']) }}" class="card-car-link">{{ track['name'] }}</a></h5>
+                </div>
+            </div>
+            <div class="row mb-3">
+                <div class="col-md-5 p-2 mx-2">
+                    <h6>Points</h6>
+                    <table class="table table-striped table-bordered table-hover">
+                        <thead class="table-dark">
+                            <tr>
+                                <th>#</th>
+                                <th>Car</th>
+                                <th>Points</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for car in track['cars_points'] %}
+                                <tr>
+                                    <td class="align-middle">{{ loop.index }}</td>
+                                    <td class="align-middle"><a href="{{ url_for('car', car_id=car['id']) }}" class="card-car-link">{{ car['name'] }}</a></td>
+                                    <td class="align-middle">{{ car['points'] }}</td>
+                                </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+                <div class="col-md-5 p-2 mx-2">
+                    <h6>Time</h6>
+                    <table class="table table-striped table-bordered table-hover">
+                        <thead class="table-dark">
+                            <tr>
+                                <th>#</th>
+                                <th>Car</th>
+                                <th>Time</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for car in track['cars_time'] %}
+                                <tr>
+                                    <td class="align-middle">{{ loop.index }}</td>
+                                    <td class="align-middle"><a href="{{ url_for('car', car_id=car['id']) }}" class="card-car-link">{{ car['name'] }}</a></td>
+                                    <td class="align-middle">{{ car['time_str'] }}</td>
+                                </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock%}

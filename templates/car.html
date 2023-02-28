@@ -1,0 +1,146 @@
+{% from "macros.jinja2" import car_class, car_type %}
+{% extends "base.html" %}
+
+
+{% block content %}
+	<div class="container">
+		<div class="row align-items-center border-bottom border-light">
+			<div class="col-md-6 p-2">
+				<img class="img-fluid rounded-4" src="{{ car['image'] }}" alt="{{ car['model'] }}">
+			</div>
+			<div class="col-md-6 p-2">
+				<h3>
+					{{ car['model'] }}
+					{% if car['mastery'] %}
+						<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check-square" viewBox="0 0 16 16">
+  							<path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
+  							<path d="M10.97 4.97a.75.75 0 0 1 1.071 1.05l-3.992 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.235.235 0 0 1 .02-.022z"/>
+						</svg>
+					{% endif %}
+				</h3>
+				<h4>{{ car['vendor'] }}</h4>
+				<table class="table table-striped table-bordered table-hover w-50">
+					<tbody>
+						<tr>
+							<td class="align-middle"><strong>Year</strong></td>
+							<td class="align-middle">{{ car['year'] }}</td>
+						</tr>
+						<tr>
+							<td class="align-middle"><strong>Class</strong></td>
+							<td class="align-middle d-flex">{{ car_class(car['class']) }}</td>
+						</tr>
+						<tr>
+							<td class="align-middle"><strong>Type</strong></td>
+							<td class="align-middle d-flex">{{ car_type(car['type']) }}</td>
+						</tr>
+						<tr>
+							<td class="align-middle"><strong>Power</strong></td>
+							<td class="align-middle">{{ car['power'] }} HP</td>
+						</tr>
+						<tr>
+							<td class="align-middle"><strong>Mass</strong></td>
+							<td class="align-middle">{{ car['mass'] }} kg</td>
+						</tr>
+						<tr>
+							<td class="align-middle"><strong>Max speed</strong></td>
+							<td class="align-middle">{{ car['max_speed'] }} km/h</td>
+						</tr>
+						<tr>
+							<td class="align-middle"><strong>Drivetrain</strong></td>
+							<td class="align-middle">{{ car['drivetrain'] }}</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="col-md-12 border-top border-light d-flex justify-content-between p-2">
+				<div class="d-item">
+					<strong>Races: </strong>{{ car['races'] }}
+				</div>
+				<div class="d-item">
+					<strong>Wins: </strong>{{ car['wins'] }}
+				</div> 
+				<div class="d-item">
+					<strong>Podiums: </strong>{{ car['podiums'] }}
+				</div>
+				<div class="d-item">
+					<strong>Championships: </strong>{{ car['championships'] }}
+				</div>
+				<div class="d-item">
+					<strong>Championship wins: </strong>{{ car['championships_wins'] }}
+				</div> 
+				<div class="d-item">
+					<strong>Championships podiums: </strong>{{ car['championships_podiums'] }}
+				</div> 
+			</div>
+			<div class="col-md-12 border-top border-light d-flex justify-content-center p-2">
+				<div class="d-item">
+					<a href="{{ url_for('add_race', car_id=car['_id']) }}" class="btn btn-success mx-2">Add race result</a>
+				</div>
+				<div class="d-item">
+					<a href="{{ url_for('add_rival', car_id=car['_id']) }}" class="btn btn-primary mx-2">Add rivals result</a>
+				</div>
+				<div class="d-item">
+					<a href="{{ url_for('edit_car', car_id=car['_id']) }}" class="btn btn-secondary mx-2">Edit</a>
+				</div>
+				{% if not car['mastery'] %}
+				<div class="d-item">
+					<a href="{{ url_for('add_mastery', car_id=car['_id']) }}" class="btn btn-secondary mx-2">Add mastery</a>
+				</div>
+				{% endif %}
+				<div class="d-item">
+					<a href="{{ url_for('delete_car', car_id=car['_id']) }}" class="btn btn-danger mx-2">Delete</a>
+				</div>
+			</div>
+			<div class="col-md-12 border-top border-light p-2">
+				<h4>Races results</h4>
+				<table class="table table-striped table-bordered table-hover">
+					<thead class="table-dark">
+						<tr>
+							<th>#</th>
+							<th>Track</th>
+							<th>Type</th>
+							<th>Lap time</th>
+							<th>Overall time</th>
+							<th>Place</th>
+						</tr>
+                	</thead>
+					<tbody>
+						{% for race in races %}
+							<tr>
+								<td class="align-middle">{{ loop.index }}</td>
+								<td class="align-middle"><a class="card-car-link" href="{{ url_for('track', track_id=race['track_id']) }}">{{ race['track_name'] }}</a></td>
+								<td class="align-middle d-flex">{{ car_type(race['car_type']) }}</td>
+								<td class="align-middle">{{ race['lap_time'] }}</td>
+								<td class="align-middle">{{ race['overall_time'] }}</td>
+								<td class="align-middle">{{ race['place'] }}</td>
+							</tr>
+						{% endfor%}
+					</tbody>
+				</table>
+			</div>
+			<div class="col-md-12 border-top border-light p-2">
+				<h4>Rivals results</h4>
+				<table class="table table-striped table-bordered table-hover">
+					<thead class="table-dark">
+						<tr>
+							<th>#</th>
+							<th>Track</th>
+							<th>Type</th>
+							<th>Rivals time</th>
+						</tr>
+                	</thead>
+					<tbody>
+						{% for rival in rivals %}
+							<tr>
+								<td class="align-middle">{{ loop.index }}</td>
+								<td class="align-middle"><a class="card-car-link" href="{{ url_for('track', track_id=rival['track_id']) }}">{{ rival['track_name'] }}</a></td>
+								<td class="align-middle d-flex">{{ car_type(rival['car_type']) }}</td>
+								<td class="align-middle">{{ rival['time'] }}</td>
+							</tr>
+						{% endfor%}
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+{% endblock%}

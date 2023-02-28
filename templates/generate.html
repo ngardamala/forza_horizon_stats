@@ -1,5 +1,71 @@
-{% extends "layout.html" %}
+{% extends "base.html" %}
 
-{% block main_content %}
+{% block content %}
+
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <h4>Generate random race</h4>
+                <form class="mb-3 p-2 border border-light rounded-3" action="{{ url_for('generated_race') }}" method="POST">
+                    <div class="mb-2">
+                        <label class="form-label" for="race_type_id">Race type</label>
+                        <select class="form-control" name="race_type" id="race_type_id">
+                            <option value="ANY">ANY</option>
+                            <option value="ROAD">ROAD</option>
+                            <option value="DIRT">DIRT</option>
+                            <option value="OFFROAD">OFFROAD</option>
+                        </select>
+                    </div>
+                    <div class="mb-2 text-center">
+                        <button class="btn btn-secondary" type="submit">Generate</button>
+                    </div>
+                </form>
+                <h4>Generate random race with car</h4>
+                <form class="mb-3 p-2 border border-light rounded-3" action="{{ url_for('generated_race') }}" method="POST">
+                    <div class="mb-2">
+                        <label class="form-label" for="race_type_id">Race type</label>
+                        <select class="form-control" name="race_type" id="race_type_id">
+                            <option value="ANY">ANY</option>
+                            <option value="ROAD">ROAD</option>
+                            <option value="DIRT">DIRT</option>
+                            <option value="OFFROAD">OFFROAD</option>
+                        </select>
+                        <label class="form-label" for="car_class_id">Car class</label>
+                        <select class="form-control" name="car_class" id="car_class_id">
+                            <option value="ANY">ANY</option>
+                            <option value="B700">B700</option>
+                            <option value="A800">A800</option>
+                            <option value="S1900">S1900</option>
+                            <option value="S2998">S2998</option>
+                        </select>
+                    </div>
+                    <div class="mb-2 text-center">
+                        <button class="btn btn-secondary" type="submit">Generate</button>
+                    </div>
+                </form>
+                <h4>Generate random championship</h4>
+                <form class="mb-3 p-2 border border-light rounded-3" action="{{ url_for('generated_championship') }}" method="POST">
+                    <div class="mb-2">
+                        <label class="form-label" for="race_type_id">Race type</label>
+                        <select class="form-control" name="race_type" id="race_type_id">
+                            <option value="ROAD">ROAD</option>
+                            <option value="DIRT">DIRT</option>
+                            <option value="OFFROAD">OFFROAD</option>
+                        </select>
+                        <label class="form-label" for="car_class_id">Car class</label>
+                        <select class="form-control" name="car_class" id="car_class_id">
+                            <option value="B700">B700</option>
+                            <option value="A800">A800</option>
+                            <option value="S1900">S1900</option>
+                            <option value="S2998">S2998</option>
+                        </select>
+                    </div>
+                    <div class="mb-2 text-center">
+                        <button class="btn btn-secondary" type="submit">Generate</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
 	
 {% endblock%}

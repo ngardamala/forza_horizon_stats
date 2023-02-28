@@ -1,0 +1,85 @@
+{% extends "base.html" %}
+
+{% block content %}
+	<div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <form class="p-2 border border-light rounded-3" action="#" method="POST">
+                    <div class="mb-2">
+                        <label class="form-label" for="track_id">Track</label>
+                        <select class="form-control" id="track_id" name="track">
+                            {% if selected_track %}
+                                <option value="{{ selected_track['_id'] }}" selected>
+                                    {{ selected_track['name'] }} - {{ selected_track['car_type'] }}
+                                </option>
+                            {% endif %}
+                            {% for track in tracks %}
+                                {% if selected_track %}
+                                    {% if track['_id'] != selected_track['_id'] %}
+                                        <option value="{{ track['_id'] }}">
+                                            {{ track['name'] }} - {{ track['car_type'] }}
+                                        </option>
+                                    {% endif %}
+                                {% else %}
+                                    <option value="{{ track['_id'] }}">
+                                        {{ track['name'] }} - {{ track['car_type'] }}
+                                    </option>
+                                {% endif %}
+                            {% endfor %}
+                        </select>
+                    </div>
+                    <div class="mb-2">
+                        <label class="form-label" for="car_id">Car</label>
+                        <select class="form-control" id="car_id" name="car">
+                            {% if selected_car %}
+                                <option value="{{ selected_car['_id'] }}" selected>
+                                    {{ selected_car['vendor'] }} - {{ selected_car['model'] }} - {{ selected_car['type'] }}
+                                </option>
+                            {% endif %}
+                            {% for car in cars %}
+                                {% if selected_car %}
+                                    {% if car['_id'] != selected_car['_id'] %}
+                                        <option value="{{ car['_id'] }}">
+                                            {{ car['vendor'] }} - {{ car['model'] }} - {{ car['type'] }}
+                                        </option>
+                                    {% endif %}
+                                {% else %}
+                                    <option value="{{ car['_id'] }}">
+                                        {{ car['vendor'] }} - {{ car['model'] }} - {{ car['type'] }}
+                                    </option>
+                                {% endif %}
+                            {% endfor %}
+                        </select>
+                    </div>
+                    <div class="mb-2">
+                        <label class="form-label" for="place_id">Place</label>
+                        <input class="form-control" id="place_id" type="text" name="place" placeholder="Enter final place (1-12)">
+                    </div>
+                    <div class="mb-2">
+                        <label class="form-label" for="lap_time_id">Lap time</label>
+                        <input class="form-control" id="lap_time_id" type="text" name="lap_time" placeholder="Enter lap time (mm:ss.ms)">
+                    </div>
+                    <div class="mb-2">
+                        <label class="form-label" for="overall_time_id">Overall time</label>
+                        <input class="form-control" id="overall_time_id" type="text" name="overall_time" placeholder="Enter overall time (mm:ss.ms)">
+                    </div>
+                    <div class="mb-2">
+                        <label class="form-label" for="championship_id">Championship</label>
+                        <select class="form-control" id="championship_id" name="championship">
+                            <option value="NO">NO</option>
+                            {% for championship in championships %}
+                                {% if not championship['completed'] %}
+                                    <option value="{{ championship['_id'] }}">{{ championship['name'] }}</option>
+                                {% endif %}
+                            {% endfor %}
+                        </select>
+                    </div>
+                    <div class="mb-2 d-flex justify-content-between">
+                        <button class="btn btn-success" type="submit">Add race result</button>
+                        <a href="#" onclick="javascript:window.history.back(-1);return false;" class="btn btn-secondary">Cancel</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock %}

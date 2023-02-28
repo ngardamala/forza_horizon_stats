@@ -1,0 +1,89 @@
+BAHIA DE PLANO CIRCUIT,ROAD,CIRCUIT,https://i.ibb.co/bsQXF1N/bahia-circuit-small.png,https://i.ibb.co/vd1scJV/bahia-circuit-big.png
+ARCH OF MULEGE CIRCUIT,ROAD,CIRCUIT,https://i.ibb.co/hZD0VZW/arc-of-mulege-small.png,https://i.ibb.co/vQY8XDp/arc-of-mulege-big.png
+LOS JARDINES CIRCUIT,ROAD,CIRCUIT,https://i.ibb.co/hf576jY/los-jardines-small.png,https://i.ibb.co/vYPy3dR/los-jardines-big.png
+CHIHUAHUA CIRCUIT,ROAD,CIRCUIT,https://i.ibb.co/SJYyp4v/chihuahua-small.png,https://i.ibb.co/0rXwB8G/chihuahua-big.png
+TIERRA PROSPERA CIRCUIT,ROAD,CIRCUIT,https://i.ibb.co/MCVr1jZ/tierra-prospera-small.png,https://i.ibb.co/hdb0BnS/tierra-prospera-big.png
+PLAYA AZUL CIRCUIT,ROAD,CIRCUIT,https://i.ibb.co/vdfTJhF/plaza-azul-small.png,https://i.ibb.co/YDJ6v90/plaza-azul-big.png
+LOOKOUT CIRCUIT,ROAD,CIRCUIT,https://i.ibb.co/SVbkwxw/lookout-small.png,https://i.ibb.co/3d0PpqK/lookout-big.png
+HORIZON MEXICO CIRCUIT,ROAD,CIRCUIT,https://i.ibb.co/kQWD2yQ/horizon-mexico-small.png,https://i.ibb.co/RB3T0tw/horizon-mexico-big.png
+EMERALD CIRCUIT,ROAD,CIRCUIT,https://i.ibb.co/JjjK78Y/emerald-small.png,https://i.ibb.co/FhqHy5M/emerald-big.png
+DUNAS BLANKAS SPRINT,ROAD,SPRINT,https://i.ibb.co/fCkdz9B/dunas-blankas-small.png,https://i.ibb.co/m6fvSmM/dunas-blankas-big.png
+DESCANSAR DORADO SPRINT,ROAD,SPRINT,https://i.ibb.co/72YTGQh/descandar-dorado-small.png,https://i.ibb.co/98jqjYD/descandar-dorado-big.png
+ESTADIO CIRCUIT,ROAD,CIRCUIT,https://i.ibb.co/W2mJgb1/estadio-small.png,https://i.ibb.co/FgGNJBL/estadio-big.png
+CATHEDRAL CIRCUIT,ROAD,CIRCUIT,https://i.ibb.co/0mss3XS/cathedral-small.png,https://i.ibb.co/xDD9F98/cathedral-big.png
+RESERVORIO SPRINT,ROAD,SPRINT,https://i.ibb.co/pPY2FbW/reservorio-small.png,https://i.ibb.co/JCt0yZY/reservorio-big.png
+COPPER CANYON SPRINT,ROAD,SPRINT,https://i.ibb.co/x2SWcGH/copper-canyon-small.png,https://i.ibb.co/vqBXx2f/copper-canyon-big.png
+VOLCAN SPRINT,ROAD,SPRINT,https://i.ibb.co/Qf0fhNx/volcan-small.png,https://i.ibb.co/pbj3x9g/volcan-big.png
+GRAN PANTANO SPRINT,ROAD,SPRINT,https://i.ibb.co/RpHBpLW/gran-pantano-small.png,https://i.ibb.co/T2m0XH4/gran-pantano-big.png
+SIERRA VERDE SPRINT,ROAD,SPRINT,https://i.ibb.co/mc5HJvz/sierra-verde-small.png,https://i.ibb.co/Sx5D0rT/sierra-verde-big.png
+PLAZA CIRCUIT,ROAD,CIRCUIT,https://i.ibb.co/pP05ngZ/plaza-small.png,https://i.ibb.co/ZSNNWs9/plaza-big.png
+LLANURAS SPRINT,ROAD,SPRINT,https://i.ibb.co/2yPbSzf/llanuras-small.png,https://i.ibb.co/41cbt05/llanuras-big.png
+PANORAMICA SPRINT,ROAD,SPRINT,https://i.ibb.co/XjRmWbm/panoramica-small.png,https://i.ibb.co/mHRTvbn/panoramica-big.png
+RIVIERA SPRINT,ROAD,SPRINT,https://i.ibb.co/QFqsPw7/riviera-small.png,https://i.ibb.co/q0Bq1xc/riviera-big.png
+BOLA OCHO CIRCUIT,ROAD,CIRCUIT,https://i.ibb.co/cr3NpFv/bola-ocho-small.png,https://i.ibb.co/3T3ZZZH/bola-ocho-big.png
+THE GOLIATH,ROAD,CIRCUIT,https://i.ibb.co/bgvdnf7/the-goliath-small.png,https://i.ibb.co/j86sNxP/the-goliath-big.png
+THE COLLOSUS,ROAD,SPRINT,https://i.ibb.co/8jxjyQh/the-collosus-small.png,https://i.ibb.co/FnJ6PNW/the-collosus-big.png
+RIVER SCRAMBLE,DIRT,CIRCUIT,https://i.ibb.co/kGGBRDq/river-small.png,https://i.ibb.co/hXB1bwz/river-big.png
+MANGROVE SCRAMBLE,DIRT,CIRCUIT,https://i.ibb.co/zsTxQ4J/mangrove-small.png,https://i.ibb.co/XtWLtn2/mangrove-big.png
+MULEGE TOWN SCRAMBLE,DIRT,CIRCUIT,https://i.ibb.co/87cXJvm/mulege-town-small.png,https://i.ibb.co/k9LsgZJ/mulege-town-big.png
+SAN JUAN SCRAMBLE,DIRT,CIRCUIT,https://i.ibb.co/3F0Pwx7/san-juan-small.png,https://i.ibb.co/2qHfLgp/san-juan-big.png
+HORIZON BAJA SCRAMBLE,DIRT,CIRCUIT,https://i.ibb.co/KzBYR2D/horizon-baja-small.png,https://i.ibb.co/DzfpKvM/horizon-baja-big.png
+TEOTIHUACAN SCRAMBLE,DIRT,CIRCUIT,https://i.ibb.co/vL3Smck/teotihuacan-small.png,https://i.ibb.co/RbRRYp7/teotihuacan-big.png
+CALDERA SCRAMBLE,DIRT,CIRCUIT,https://i.ibb.co/9hJwcSf/caldera-small.png,https://i.ibb.co/3Cspjcz/caldera-big.png
+LA SELVA SCRAMBLE,DIRT,CIRCUIT,https://i.ibb.co/9wnB22C/la-selva-small.png,https://i.ibb.co/Jtv9CJF/la-selva-big.png
+EL PIPILA SCRAMBLE,DIRT,CIRCUIT,https://i.ibb.co/9HqKtLs/el-pipila-small.png,https://i.ibb.co/sHy1hxb/el-pipila-big.png
+CASCADA TRAIL,DIRT,SPRINT,https://i.ibb.co/GvbRL1H/cascada-small.png,https://i.ibb.co/tbWQMXy/cascada-big.png
+MONTANA TRAIL,DIRT,SPRINT,https://i.ibb.co/yXZv2PT/montana-small.png,https://i.ibb.co/gw4rTxV/montana-big.png
+DESIERTO TRAIL,DIRT,SPRINT,https://i.ibb.co/T2Hn1YR/desierto-small.png,https://i.ibb.co/hdxGMyK/desierto-big.png
+BAJA CALIFORNIA TRAIL,DIRT,SPRINT,https://i.ibb.co/MyTgb6M/baja-california-small.png,https://i.ibb.co/pbQ1C6H/baja-california-big.png
+BAJIO TRAIL,DIRT,SPRINT,https://i.ibb.co/H2Nkx5B/bajio-small.png,https://i.ibb.co/xDXBHR0/bajio-big.png
+CORDILLERA TRAIL,DIRT,SPRINT,https://i.ibb.co/h2WhjV6/cordillera-small.png,https://i.ibb.co/vd6J506/cordillera-big.png
+TAPALPA TRAIL,DIRT,SPRINT,https://i.ibb.co/0cHyktj/tapalpa-small.png,https://i.ibb.co/KrTkNFW/tapalpa-big.png
+FUERA DEL CAMINO TRAIL,DIRT,SPRINT,https://i.ibb.co/Wn85gSz/fuera-del-camino-small.png,https://i.ibb.co/tBP0XD7/fuera-del-camino-big.png
+TULUM TRAIL,DIRT,SPRINT,https://i.ibb.co/bdd6dFm/tulum-small.png,https://i.ibb.co/bFXCPrz/tulum-big.png
+BARRANCA TRAIL,DIRT,SPRINT,https://i.ibb.co/XC7NqfN/barranca-small.png,https://i.ibb.co/Jx26WNQ/barranca-big.png
+THE GAUNTLET,DIRT,SPRINT,https://i.ibb.co/HXv7qCJ/the-gauntlet-small.png,https://i.ibb.co/B4GJn5L/the-gauntlet-big.png
+BAJA CROSS COUNTRY CIRCUIT,OFFROAD,CIRCUIT,https://i.ibb.co/kmR2QVx/baja-small.png,https://i.ibb.co/v4Mf1hW/baja-big.png
+COSTERA CROSS COUNTRY CIRCUIT,OFFROAD,CIRCUIT,https://i.ibb.co/YBhsXQq/costera-small.png,https://i.ibb.co/Twp06C9/costera-big.png
+ESTADIO CROSS COUNTRY CIRCUIT,OFFROAD,CIRCUIT,https://i.ibb.co/tYMTWWG/estadio-cross-country-small.png,https://i.ibb.co/2664zNp/estadio-cross-country-big.png
+LAS RANAS CROSS COUNTRY,OFFROAD,SPRINT,https://i.ibb.co/XWCnQQ2/las-ranas-small.png,https://i.ibb.co/kqCFHjW/las-ranas-big.png
+URBAN CROSS COUNTRY CIRCUIT,OFFROAD,CIRCUIT,https://i.ibb.co/nDHVW9j/urban-small.png,https://i.ibb.co/M9yz5Rd/urban-big.png
+LAS DUNAS CROSS COUNTRY,OFFROAD,SPRINT,https://i.ibb.co/bzH8dsM/las-dunas-small.png,https://i.ibb.co/XJyLhf6/las-dunas-big.png
+RIBERA ROCOSA CROSS COUNTRY,OFFROAD,SPRINT,https://i.ibb.co/2tbkXhw/ribera-rocosa-small.png,https://i.ibb.co/qx435Dx/ribera-rocosa-big.png
+COSTA ESTE CROSS COUNTRY,OFFROAD,SPRINT,https://i.ibb.co/7kfjSSB/costa-este-small.png,https://i.ibb.co/vHpZCrf/costa-este-big.png
+EL DESCENSO CROSS COUNTRY,OFFROAD,SPRINT,https://i.ibb.co/jrRh1sj/el-descenso-small.png,https://i.ibb.co/zFnfN48/el-descenso-big.png
+OASIS CROSS COUNTRY,OFFROAD,SPRINT,https://i.ibb.co/B4TPQjK/oasis-small.png,https://i.ibb.co/2qQdWTW/oasis-big.png
+TROPICO CROSS COUNTRY,OFFROAD,SPRINT,https://i.ibb.co/SrPXtHz/tropico-small.png,https://i.ibb.co/ykWqkYF/tropico-big.png
+LAS GRANJAS CROSS COUNTRY,OFFROAD,SPRINT,https://i.ibb.co/YDbT62d/las-granjas-small.png,https://i.ibb.co/N7Pyq3g/las-granjas-big.png
+RESTOS CROSS COUNTRY,OFFROAD,SPRINT,https://i.ibb.co/2PSvC1p/restos-small.png,https://i.ibb.co/59kD8N3/restos-big.png
+FOTO FINAL CROSS COUNTRY,OFFROAD,SPRINT,https://i.ibb.co/YB0hxJq/foto-final-small.png,https://i.ibb.co/cgSLWqc/foto-final-big.png
+EK BALAM CROSS COUNTRY CIRCUIT,OFFROAD,CIRCUIT,https://i.ibb.co/djwgxK8/ek-balam-small.png,https://i.ibb.co/mBDTVCh/ek-balam-big.png
+COPPER CANYON CROSS COUNTRY,OFFROAD,SPRINT,https://i.ibb.co/1MbJP7W/copper-canyon-cross-country-small.png,https://i.ibb.co/DGmhhz4/copper-canyon-cross-country-big.png
+HERENCIA CROSS COUNTRY CIRCUIT,OFFROAD,CIRCUIT,https://i.ibb.co/wKdKFjX/herencia-small.png,https://i.ibb.co/jgYGVkp/herencia-big.png
+AIRFIELD CROSS COUNTRY CIRCUIT,OFFROAD,CIRCUIT,https://i.ibb.co/qW17ds9/airfield-small.png,https://i.ibb.co/r54wxvt/airfield-big.png
+THE TITAN,OFFROAD,SPRINT,https://i.ibb.co/r6BYgrj/the-titan-small.png,https://i.ibb.co/W5sLkPj/the-titan-big.png
+FESTIVAL CROSS COUNTRY,OFFROAD,SPRINT,https://i.ibb.co/DGFKZmT/festival-small.png,https://i.ibb.co/mDTgT8q/festival-big.png
+EL LAGO BLANKO,ROAD,SPRINT,https://i.ibb.co/C73M2wB/el-lago-blanco-small.png,https://i.ibb.co/TmzF8VQ/el-lago-blanco-big.png
+RUTA NORTE,ROAD,SPRINT,https://i.ibb.co/PmNzx8k/ruta-norte-small.png,https://i.ibb.co/yyjDZ5n/ruta-norte-big.png
+FESTIVAL GATECRASH,ROAD,SPRINT,https://i.ibb.co/8s5Rm1L/festival-gatecrash-small.png,https://i.ibb.co/Vqgd4Xh/festival-gatecrash-big.png
+COAST RUN,ROAD,SPRINT,https://i.ibb.co/t3fmbMS/coast-run-small.png,https://i.ibb.co/t3fmbMS/coast-run-big.png
+CARRETERA CHASE,ROAD,SPRINT,https://i.ibb.co/yPFknyd/carretera-chase-small.png,https://i.ibb.co/kxxPVns/carretera-chase-big.png
+COSTA ROCOSA,ROAD,SPRINT,https://i.ibb.co/vLFxkLP/costa-rocosa-small.png,https://i.ibb.co/zsjqmGt/costa-rocosa-big.png
+HORIZON CALLEJERA,ROAD,SPRINT,https://i.ibb.co/KD3zXXM/horizon-callejera-small.png,https://i.ibb.co/8bpZxbn/horizon-callejera-big.png
+HILLTOP DESCENT,ROAD,SPRINT,https://i.ibb.co/GMp2Qnv/hilltop-descent-small.png,https://i.ibb.co/G7RNfyS/hilltop-descent-big.png
+JUNGLE DESCENT,ROAD,SPRINT,https://i.ibb.co/pwdx0ZX/jungle-descent-small.png,https://i.ibb.co/Nn8C0Yc/jungle-descent-big.png
+LAS LADERAS,ROAD,SPRINT,https://i.ibb.co/TrDZCRt/las-laderas-small.png,https://i.ibb.co/fnZFM5d/las-laderas-big.png
+GRANJAS DE TAPALPA,ROAD,SPRINT,https://i.ibb.co/NKkbxKD/granjas-de-tapalpa-small.png,https://i.ibb.co/3zJkffb/granjas-de-tapalpa-big.png
+WETLAND CHARGE,ROAD,SPRINT,https://i.ibb.co/mcXpRd2/wetland-charge-small.png,https://i.ibb.co/SVFZQK7/wetland-charge-big.png
+LAS AFUERAS,ROAD,SPRINT,https://i.ibb.co/dbkmFHk/las-afueras-small.png,https://i.ibb.co/6YrprZ7/las-afueras-big.png
+CRUCE DEL VALLE,ROAD,SPRINT,https://i.ibb.co/RCSfwrH/cruce-del-valle-small.png,https://i.ibb.co/Lx9N1xk/cruce-del-valle-big.png
+TUNNEL RUN,ROAD,SPRINT,https://i.ibb.co/DbSfMYH/tunnel-run-small.png,https://i.ibb.co/yQygCT7/tunnel-run-big.png
+BOSQUE DEL SUR,ROAD,SPRINT,https://i.ibb.co/gzytD0g/bosque-del-sur-small.png,https://i.ibb.co/28Dh8xM/bosque-del-sur-big.png
+GUANAJUATO SUR,ROAD,SPRINT,https://i.ibb.co/tBC65X6/guanajuato-sur-small.png,https://i.ibb.co/jf4nCbG/guanajuato-sur-big.png
+HIGHLAND CLIMB,ROAD,SPRINT,https://i.ibb.co/G2Vt60m/highland-climb-small.png,https://i.ibb.co/PcQK2CS/highland-climb-big.png
+CANON RUN,ROAD,SPRINT,https://i.ibb.co/tJhvCJ8/canon-run-small.png,https://i.ibb.co/tmr1mHh/canon-run-big.png
+CASTILLO DEL MAR,ROAD,SPRINT,https://i.ibb.co/gvPj0mX/castillo-del-mar-small.png,https://i.ibb.co/SPg3KrX/castillo-del-mar-big.png
+THE MARATHON,ROAD,SPRINT,https://i.ibb.co/8xTHfTr/the-marathon-small.png,https://i.ibb.co/4M83Vd3/the-marathon-big.png
+FESTIVAL DRAG STRIP,ROAD,SPRINT,https://i.ibb.co/QNSkTVC/festival-drag-strip-small.png,https://i.ibb.co/pdWzdff/festival-drag-strip-big.png
+AERODROMO DRAG STRIP,ROAD,SPRINT,https://i.ibb.co/RjbBVXs/aerodromo-drag-strip-small.png,https://i.ibb.co/7GQ9Kc9/aerodromo-drag-strip-big.png
+TEOTIHUACAN DRAG STRIP,ROAD,SPRINT,https://i.ibb.co/TWZVM73/teotihuacan-drag-strip-small.png,https://i.ibb.co/kJZSB5X/teotihuacan-drag-strip-big.png

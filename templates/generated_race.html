@@ -1,0 +1,20 @@
+{% from "macros.jinja2" import car_class, car_type %}
+{% extends "base.html" %}
+
+{% block content %}
+     <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-6 mb-3 p-2 border border-light rounded-3">
+                {% if car %}
+                    <h4 class="mb-0">Random car</h4>
+                    <div class="mb-2"><a href="{{ url_for('car', car_id=car['_id']) }}" class="card-car-link">{{ car['vendor'] }} - {{ car['model'] }}</a></div>
+                {% endif %}
+                <h4 class="mb-0">Random track</h4>
+                <div class="mb-2"><a href="{{ url_for('track', track_id=track['_id']) }}" class="card-car-link">{{ track['name'] }}</a></div>
+                <div class="mb-2">{{ track_season }} | {{ track_time }} | {{ track_weather }} | {{ track_competition }}</div>
+                <a href="{{ url_for('generate') }}" class="btn btn-secondary">Back</a>
+            </div>
+        </div>
+    </div>
+	
+{% endblock%}

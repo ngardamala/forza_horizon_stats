@@ -1,0 +1,169 @@
+{% macro car_class(class) %}
+    {% if class == 'B700' %}
+        <div class="card-car-class-b d-flex m-0 p-0">
+            <div class="card-car-class-b-letter m-0 p-1">
+                B
+            </div>
+            <div class="card-car-class-pi m-0 p-1">
+                700
+            </div>
+        </div>
+    {% elif class == 'A800' %}
+        <div class="card-car-class-a d-flex m-0 p-0">
+            <div class="card-car-class-a-letter m-0 p-1">
+                A
+            </div>
+            <div class="card-car-class-pi m-0 p-1">
+                800
+            </div>
+        </div>
+    {% elif class == 'S1900' %}
+        <div class="card-car-class-s1 d-flex m-0 p-0">
+            <div class="card-car-class-s1-letter m-0 p-1">
+                S1
+            </div>
+            <div class="card-car-class-pi m-0 p-1">
+                900
+            </div>
+        </div>
+    {% else %}
+        <div class="card-car-class-s2 d-flex m-0 p-0">
+            <div class="card-car-class-s2-letter m-0 p-1">
+                S2
+            </div>
+            <div class="card-car-class-pi m-0 p-1">
+                998
+            </div>
+        </div>
+    {% endif %}
+{% endmacro %}
+
+{% macro car_type(type) %}
+    {% if type == 'ROAD' %}
+        <div class="car-type-road text-center">ROAD</div>
+    {% elif type == 'DIRT' %}
+        <div class="car-type-dirt text-center">DIRT</div>
+    {% else %}
+        <div class="car-type-offroad text-center">OFFROAD</div>
+    {% endif %}
+{% endmacro %}
+
+{% macro table_row(car) %}
+    <td class="align-middle">{{ car['vendor'] }}</td>
+    <td class="align-middle"><a class="card-car-link" href="{{ url_for('car', car_id=car['_id']) }}">{{ car['model'] }}</a></td>
+    <td class="align-middle">{{ car['year'] }}</td>
+    <td class="align-middle">{{ car_class(car['class']) }}</td>
+    <td class="align-middle">{{ car_type(car['type']) }}</td>
+    <td class="align-middle">{{ car['power'] }}</td>
+    <td class="align-middle">{{ car['mass'] }}</td>
+    <td class="align-middle">{{ car['max_speed'] }}</td>
+    <td class="align-middle">{{ car['drivetrain'] }}</td>
+    <td class="align-middle">{{ car['test_track_str'] }}</td>
+    <td class="align-middle">{{ car['races'] }}</td>
+    <td class="align-middle">{{ car['wins'] }}</td>
+    <td class="align-middle">{{ car['podiums'] }}</td>
+{% endmacro %}
+
+{% macro car_card(car) %}
+    <div class="card mx-2 mb-3 mt-0 
+        {% if car['type'] == 'ROAD' %}
+            card-car-road
+        {% elif car['type'] == 'DIRT' %}
+            card-car-dirt
+        {% else %}
+            card-car-offroad
+        {% endif %}">
+        <div class="card-title text-center text-white p-2 mb-0 d-flex flex-column justify-content-between
+            {% if car['type'] == 'ROAD' %}
+                card-car-title-road
+            {% elif car['type'] == 'DIRT' %}
+                card-car-title-dirt
+            {% else %}
+                card-car-title-offroad
+            {% endif %}">
+            <h4 class="mb-1 card-car-model p-2"><a class="card-car-link" href="{{ url_for('car', car_id=car['_id']) }}">{{ car['model'] }}</a></h3>
+            <p class="mb-1">{{ car['vendor'] }}</p>
+            <p class="mb-1">{{ car['year'] }}</p>
+        </div>
+        <img src="{{ car['image'] }}" class="card-img img-fluid rounded-4 p-2" alt="{{ car['model'] }}">
+        <div class="card-body d-flex justify-content-between align-items-end mx-2 mb-2 p-0">
+            {{ car_class(car['class']) }}
+            <div class="card-car-drivetrain m-0 p-0">{{ car['drivetrain'] }}</div>
+        </div>
+    </div>
+{% endmacro %}
+
+{% macro track_card(track) %}
+    <div class="card mx-2 mb-3 mt-0 
+        {% if track['car_type'] == 'ROAD' %}
+            card-car-road
+        {% elif track['car_type'] == 'DIRT' %}
+            card-car-dirt
+        {% else %}
+            card-car-offroad
+        {% endif %}">
+        <div class="card-track-title text-center text-white p-2 mb-0 d-flex flex-column justify-content-between
+            {% if track['car_type'] == 'ROAD' %}
+                card-car-title-road
+            {% elif track['car_type'] == 'DIRT' %}
+                card-car-title-dirt
+            {% else %}
+                card-car-title-offroad
+            {% endif %}">
+            <h4 class="mb-1 card-car-model p-2"><a class="card-car-link" href="{{ url_for('track', track_id=track['_id']) }}">{{ track['name'] }}</a></h3>
+            <p class="mb-1">{{ track['track_type'] }}</p>
+        </div>
+        <img src="{{ track['small_image'] }}" class="card-img img-fluid rounded-4 p-2" alt="{{ track['name'] }}">
+    </div>
+{% endmacro %}
+
+{% macro sort_search_bar() %}
+    <div class="d-flex flex-wrap align-items-center justify-content-center">
+        <div class="d-inline m-2">
+            <form class="" action="#" method="GET">
+                <div class="input-group">
+                    <button class="btn btn-secondary" type="submit">Sort by</button>
+                    <select class="form-control" name="cars_sort_by">
+                        <option value="added">Date added</option>
+                        <option value="vendor">Vendor</option>
+                        <option value="year">Year</option>
+                        <option value="class">Class</option>
+                        <option value="type">Type</option>
+                        <option value="power">Power</option>
+                        <option value="mass">Mass</option>
+                        <option value="max_speed">Max speed</option>
+                        <option value="drivetrain">Drivetrain</option>
+                        <option value="races">Races</option>
+                        <option value="wins">Wins</option>
+                        <option value="wins">Test track time</option>
+                    </select>
+                </div>
+            </form>
+        </div>
+        <div class="d-inline m-2">
+            <form class="" action="#" method="GET">
+                <div class="input-group">
+                    <button class="btn btn-secondary" type="submit">Search</button>
+                    <input class="form-control" type="text" name="search_str">
+                </div>
+            </form>
+        </div>
+        <div class="d-inline m-2">
+            <a href="{{ url_for('add_car') }}" class="btn btn-secondary">Add new car</a>
+        </div>
+	</div>
+{% endmacro %}
+
+{% macro search_bar() %}
+    <div class="d-flex flex-wrap align-items-center justify-content-center">
+        <div class="d-inline m-2">
+            <form class="" action="#" method="GET">
+                <div class="input-group">
+                    <button class="btn btn-secondary" type="submit">Search</button>
+                    <input class="form-control" type="text" name="search_str">
+                </div>
+            </form>
+        </div>
+	</div>
+{% endmacro %}
+

@@ -1,0 +1,72 @@
+{% from "macros.jinja2" import car_class, car_type %}
+{% extends "base.html" %}
+
+{% block content %}
+    <div class="container">
+        <div class="row align-items-center justify-content-center">
+            <div class="col-md-12 p-2 border-bottom border-light text-center">
+				<img class="img-fluid rounded-4" src="{{ track['big_image'] }}" alt="{{ track['name'] }}">
+			</div>
+            <div class="col-md-12 border-bottom border-light d-flex justify-content-center p-2">
+				<div class="d-item">
+					<a href="{{ url_for('add_race', track_id=track['_id']) }}" class="btn btn-success mx-2">Add race result</a>
+				</div>
+				<div class="d-item">
+					<a href="{{ url_for('add_rival', track_id=track['_id']) }}" class="btn btn-primary mx-2">Add rivals result</a>
+				</div>
+			</div>
+            <div class="col-md-12 border-bottom border-light p-2">
+				<h4>Races results</h4>
+				<table class="table table-striped table-bordered table-hover">
+					<thead class="table-dark">
+						<tr>
+							<th>#</th>
+							<th>Type</th>
+							<th>Car</th>
+							<th>Class</th>
+							<th>Lap time</th>
+							<th>Overall time</th>
+							<th>Place</th>
+						</tr>
+                	</thead>
+					<tbody>
+						{% for race in races %}
+							<tr>
+								<td class="align-middle">{{ loop.index }}</td>
+								<td class="align-middle d-flex">{{ car_type(race['car_type']) }}</td>
+								<td class="align-middle"><a class="card-car-link" href="{{ url_for('car', car_id=race['car_id']) }}">{{ race['car'] }}</a></td>
+								<td class="align-middle d-flex">{{ car_class(race['car_class']) }}</td>
+								<td class="align-middle">{{ race['lap_time'] }}</td>
+								<td class="align-middle">{{ race['overall_time'] }}</td>
+								<td class="align-middle">{{ race['place'] }}</td>
+							</tr>
+						{% endfor%}
+					</tbody>
+				</table>
+			</div>
+			<div class="col-md-12 border-bottom border-light p-2">
+				<h4>Rivals results</h4>
+				<table class="table table-striped table-bordered table-hover">
+					<thead class="table-dark">
+						<tr>
+							<th>#</th>
+							<th>Car</th>
+                            <th>Class</th>
+							<th>Rivals time</th>
+						</tr>
+                	</thead>
+					<tbody>
+						{% for rival in rivals %}
+							<tr>
+								<td class="align-middle">{{ loop.index }}</td>
+								<td class="align-middle"><a class="card-car-link" href="{{ url_for('car', car_id=rival['car_id']) }}">{{ rival['car'] }}</a></td>
+								<td class="align-middle d-flex">{{ car_class(rival['car_class']) }}</td>
+								<td class="align-middle">{{ rival['time'] }}</td>
+							</tr>
+						{% endfor%}
+					</tbody>
+				</table>
+			</div>
+        </div>
+    </div>
+{% endblock%}

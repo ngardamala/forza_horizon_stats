@@ -1,0 +1,35 @@
+{% from "macros.jinja2" import car_class, car_type %}
+{% extends "base.html" %}
+
+{% block content %}
+	<div class="container">
+        <div class="row col-md-12">
+            <div class="col-md-12">
+                <table class="table table-striped table-bordered table-hover">
+                    <thead class="table-dark">
+                        <th>#</th>
+                        <th>Track</th>
+                        <th>Type</th>
+                        <th>Car</th>
+                        <th>Class</th>
+                        <th>Time</th>
+                        <th>Delete</th>
+                    </thead>
+                    <tbody>
+                        {% for rival in rivals %}
+                            <tr>
+                                <td class="align-middle">{{ loop.index }}</td>
+                                <td class="align-middle"><a class="card-car-link" href="{{ url_for('track', track_id=rival['track_id']) }}">{{ rival['track'] }}</a></td>
+                                <td class="align-middle d-flex">{{ car_type(rival['car_type']) }}</td>
+                                <td class="align-middle"><a class="card-car-link" href="{{ url_for('car', car_id=rival['car_id']) }}">{{ rival['car'] }}</a></td>
+                                <td class="align-middle d-flex">{{ car_class(rival['car_class']) }}</td>
+                                <td class="align-middle">{{ rival['time'] }}</td>
+                                <td><a class="btn btn-danger" href="{{ url_for('delete_rival', rival_id=rival['rival_id'] )}}">Delete</a></td>
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+{% endblock%}

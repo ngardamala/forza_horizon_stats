@@ -1,5 +1,14 @@
-{% extends "layout.html" %}
+{% from "macros.jinja2" import track_card, search_bar %}
+{% extends "base.html" %}
 
-{% block main_content %}
-	
+
+{% block content %}
+	<div class="container">
+        {{ search_bar() }}
+        <div class="d-flex flex-wrap">
+			{% for track in tracks %}
+				{{ track_card(track) }}
+			{% endfor %}
+		</div>
+	</div>
 {% endblock%}

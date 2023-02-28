@@ -1,0 +1,39 @@
+{% from "macros.jinja2" import car_class, car_type %}
+{% extends "base.html" %}
+
+{% block content %}
+	<div class="container">
+        <div class="row col-md-12">
+            <div class="col-md-12">
+                <table class="table table-striped table-bordered table-hover">
+                    <thead class="table-dark">
+                        <th>#</th>
+                        <th>Track</th>
+                        <th>Type</th>
+                        <th>Car</th>
+                        <th>Class</th>
+                        <th>Lap time</th>
+                        <th>Overall time</th>
+                        <th>Place</th>
+                        <th>Delete</th>
+                    </thead>
+                    <tbody>
+                        {% for race in races %}
+                            <tr>
+                                <td class="align-middle">{{ loop.index }}</td>
+                                <td class="align-middle"><a class="card-car-link" href="{{ url_for('track', track_id=race['track_id']) }}">{{ race['track'] }}</a></td>
+                                <td class="align-middle d-flex">{{ car_type(race['car_type']) }}</td>
+                                <td class="align-middle"><a class="card-car-link" href="{{ url_for('car', car_id=race['car_id']) }}">{{ race['car'] }}</a></td>
+                                <td class="align-middle d-flex">{{ car_class(race['car_class']) }}</td>
+                                <td class="align-middle">{{ race['lap_time'] }}</td>
+                                <td class="align-middle">{{ race['overall_time'] }}</td>
+                                <td class="align-middle">{{ race['place'] }}</td>
+                                <td><a class="btn btn-danger" href="{{ url_for('delete_race', race_id=race['race_id'] )}}">Delete</a></td>
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+{% endblock%}
