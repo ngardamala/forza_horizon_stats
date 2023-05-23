@@ -20,6 +20,8 @@
                     <div class="mb-1">
                         <label class="form-label" for="class_id">Class</label>
                         <select class="form-control" id="class_id" name="class">
+                            <option value="D500" {{ 'selected' if car['class'] == 'D500' else '' }}>D500</option>
+                            <option value="C600" {{ 'selected' if car['class'] == 'C600' else '' }}>C600</option>
                             <option value="B700" {{ 'selected' if car['class'] == 'B700' else '' }}>B700</option>
                             <option value="A800" {{ 'selected' if car['class'] == 'A800' else '' }}>A800</option>
                             <option value="S1900" {{ 'selected' if car['class'] == 'S1900' else '' }}>S1900</option>

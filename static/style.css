@@ -68,6 +68,29 @@ body {
 .card-body {
 	font-size: 1.2rem;
 }
+
+.card-car-class-d {
+	border: 2px solid #52f9ff;
+}
+.card-car-class-d-letter {
+	font-weight: bold;
+	background-color: #52f9ff;
+	color: white;
+	min-width: 30px;
+	text-align: center;
+}
+
+.card-car-class-c {
+	border: 2px solid #ffef62;
+}
+.card-car-class-c-letter {
+	font-weight: bold;
+	background-color: #ffef62;
+	color: white;
+	min-width: 30px;
+	text-align: center;
+}
+
 .card-car-class-b {
 	border: 2px solid #FF8F00;
 }
